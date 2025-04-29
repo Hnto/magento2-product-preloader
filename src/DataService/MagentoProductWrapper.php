@@ -50,6 +50,14 @@ class MagentoProductWrapper implements ProductWrapper
     /**
      * {@inheritDoc}
      */
+    public function getRowId(): int
+    {
+        return (int) $this->product->getRowId();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function isType(string ...$type): bool
     {
         return in_array($this->product->getTypeId(), $type, true);
