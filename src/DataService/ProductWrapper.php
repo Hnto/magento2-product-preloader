@@ -29,6 +29,13 @@ interface ProductWrapper
     public function getId(): int;
 
     /**
+     * Returns product Row ID if available
+     *
+     * @return int
+     */
+    public function getRowId(): int;
+    
+    /**
      * Check if product is of a type
      *
      * @param string ...$type
